@@ -26,6 +26,7 @@ function screenController() {
         mainNavBar.appendChild(navBarBtn2)
         mainNavBar.appendChild(navBarBtn3)
         content.appendChild(mainNavBar);
+        navBarBtn1.classList.add("btn");
 
 
         
@@ -43,27 +44,35 @@ function screenController() {
             }
             else if(document.contains(document.getElementById("menuDivId"))){
                 document.getElementById("menuDivId").remove();
+                navBarHandler.navBarBtn2.classList.remove("btn")
+                home();
+                navBarHandler.navBarBtn1.classList.add("btn")
+
             }
             else if(document.contains(document.getElementById("aboutDivId"))){
                 document.getElementById("aboutDivId").remove();
-            }
-            else{
+                navBarHandler.navBarBtn3.classList.remove("btn")
                 home();
+                navBarHandler.navBarBtn1.classList.add("btn")
             }
         })
 
         navBarHandler.navBarBtn2.addEventListener('click', function(){
             if(document.contains(document.getElementById("homeDivId"))){
                 document.getElementById("homeDivId").remove();
+                navBarHandler.navBarBtn1.classList.remove("btn")
+                menu();
+                navBarHandler.navBarBtn2.classList.add("btn")
+
             }
             else if(document.contains(document.getElementById("menuDivId"))){
                 return;
             }
             else if(document.contains(document.getElementById("aboutDivId"))){
                 document.getElementById("aboutDivId").remove();
-            }
-            else{
+                navBarHandler.navBarBtn3.classList.remove("btn")
                 menu();
+                navBarHandler.navBarBtn2.classList.add("btn")
             }
             });
             
@@ -73,15 +82,18 @@ function screenController() {
         navBarHandler.navBarBtn3.addEventListener('click', function(){
             if(document.contains(document.getElementById("homeDivId"))){
                 document.getElementById("homeDivId").remove();
+                navBarHandler.navBarBtn1.classList.remove("btn")
+                about();
+                navBarHandler.navBarBtn3.classList.add("btn")
             }
             else if(document.contains(document.getElementById("menuDivId"))){
                 document.getElementById("menuDivId").remove();
+                navBarHandler.navBarBtn2.classList.remove("btn")
+                about();
+                navBarHandler.navBarBtn3.classList.add("btn")
             }
             else if(document.contains(document.getElementById("aboutDivId"))){
                 return;
-            }
-            else {
-            about();
             }
         })
         
@@ -99,3 +111,4 @@ function screenController() {
 }
 
 screenController();
+home();
