@@ -1,7 +1,8 @@
 const menu = function() {
     const content = document.querySelector('#content')
     const menuDiv = document.createElement("div")
-    content.appendChild(menuDiv)
+    menuDiv.setAttribute("id","menuDivId");
+    content.appendChild(menuDiv);
 
     function topHeader()
     {

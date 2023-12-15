@@ -38,20 +38,53 @@ function screenController() {
     function clickHandler(){
         const navBarHandler = navBar()
         navBarHandler.navBarBtn1.addEventListener('click', function(){
-            let execution = true;
-            if(execution === true){
-                execution = false;
+            if(document.contains(document.getElementById("homeDivId"))){
+                return;
+            }
+            else if(document.contains(document.getElementById("menuDivId"))){
+                document.getElementById("menuDivId").remove();
+            }
+            else if(document.contains(document.getElementById("aboutDivId"))){
+                document.getElementById("aboutDivId").remove();
+            }
+            else{
                 home();
             }
         })
 
         navBarHandler.navBarBtn2.addEventListener('click', function(){
-            let execution = true;
-            if(execution === true){
-                execution = false;
+            if(document.contains(document.getElementById("homeDivId"))){
+                document.getElementById("homeDivId").remove();
+            }
+            else if(document.contains(document.getElementById("menuDivId"))){
+                return;
+            }
+            else if(document.contains(document.getElementById("aboutDivId"))){
+                document.getElementById("aboutDivId").remove();
+            }
+            else{
                 menu();
             }
+            });
+            
+            
+        
+
+        navBarHandler.navBarBtn3.addEventListener('click', function(){
+            if(document.contains(document.getElementById("homeDivId"))){
+                document.getElementById("homeDivId").remove();
+            }
+            else if(document.contains(document.getElementById("menuDivId"))){
+                document.getElementById("menuDivId").remove();
+            }
+            else if(document.contains(document.getElementById("aboutDivId"))){
+                return;
+            }
+            else {
+            about();
+            }
         })
+        
     }
     clickHandler();
 

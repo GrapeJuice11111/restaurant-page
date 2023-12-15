@@ -1,6 +1,7 @@
 const home = function() {
     const content = document.querySelector('#content')
     const homeDiv = document.createElement("div")
+    homeDiv.setAttribute("id","homeDivId")
     content.appendChild(homeDiv)
 
     function picture() {
