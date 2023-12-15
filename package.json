@@ -4,7 +4,9 @@
   "description": "The restaurant website is a single page website showcasing the usecase of webpack, ES6 Modules and npm. This project being simple at core demonstrates organized code while showcasing bundling files in JS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",

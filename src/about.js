@@ -1,4 +1,8 @@
 const about = function() {
+    const content = document.querySelector('#content')
+    const aboutDiv = document.createElement("div")
+    content.appendChild(aboutDiv)
+
 
     function picture() {
         backgroundPicture = document.createElement("img")
