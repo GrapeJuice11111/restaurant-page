@@ -1,3 +1,7 @@
+import lemonadeIcon from './glassicon.jpeg'
+
+
+
 const about = function() {
     const content = document.querySelector('#content')
     const aboutDiv = document.createElement("div")
@@ -9,7 +13,7 @@ const about = function() {
     function picture() {
         const backgroundPicture = document.createElement("img")
         backgroundPicture.classList.add("pictureAbout")
-        backgroundPicture.setAttribute('src', '')
+        backgroundPicture.setAttribute('src', lemonadeIcon)
         backgroundPicture.setAttribute('alt', "aboutUsPicture")
         aboutDiv.appendChild(backgroundPicture)
     }

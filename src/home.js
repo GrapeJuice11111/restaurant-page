@@ -1,3 +1,5 @@
+import lemonadeImage from './lemonadelush.jpeg'
+
 const home = function() {
     const content = document.querySelector('#content')
     const homeDiv = document.createElement("div")
@@ -7,7 +9,7 @@ const home = function() {
     function picture() {
         const backgroundPicture = document.createElement("img")
         backgroundPicture.classList.add("picture")
-        backgroundPicture.setAttribute('src', './lemonadelush.jpeg')
+        backgroundPicture.setAttribute('src', lemonadeImage)
         backgroundPicture.setAttribute('alt', "Lemonade Picture")
         homeDiv.appendChild(backgroundPicture);
     }
@@ -27,7 +29,7 @@ const home = function() {
     function body(){
         const middleBody = document.createElement("article")
         middleBody.classList.add("middleBodyHome")
-        middleBody.textContent = " Immerse yourself in the delightful world of LemonadeLush Crafted from handpicked, sun-kissed lemons, our refreshing concoction offers a burst of natural flavor that transports you to vibrant lemon orchards. Meticulously balanced with the perfect sweetness, each sip is a symphony of taste, ranging from classic to mint-infused and berry-burst. Embracing farm-to-cup freshness, our locally sourced ingredients ensure that every glass supports local farmers. Ideal for any occasion, be it by the pool, in the park, or at a summer soirée, Alice Lemonade elevates every moment. Join the Alice Lemonade Club for exclusive perks and visit our stand at New York City to indulge in the pure joy of LemonadeLush!"
+        middleBody.textContent = " Immerse yourself in the delightful world of LemonadeLush Crafted from handpicked, sun-kissed lemons, our refreshing concoction offers a burst of natural flavor that transports you to vibrant lemon orchards. Meticulously balanced with the perfect sweetness, each sip is a symphony of taste, ranging from classic to mint-infused and berry-burst. Embracing farm-to-cup freshness, our locally sourced ingredients ensure that every glass supports local farmers. Ideal for any occasion, be it by the pool, in the park, or at a summer soirée,  LemonadeLush elevates every moment. Join the Alice Lemonade Club for exclusive perks and visit our stand at New York City to indulge in the pure joy of LemonadeLush!"
         homeDiv.appendChild(middleBody);
     }
     body();

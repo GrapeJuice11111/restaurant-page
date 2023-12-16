@@ -1,7 +1,7 @@
 import { about } from './about.js'
 import { menu } from './menu.js'
 import { home } from './home.js'
-
+import  './style.css';
 
 const  content = document.querySelector('#content')
 
@@ -102,11 +102,8 @@ function screenController() {
 
 
 
-    function staticFooter(){
-        const footer = document.createElement("footer")
-        footer.textContent = "LemonLush &#169; 2023"
-    }
-    staticFooter();
+    
+    
 
 }
 
